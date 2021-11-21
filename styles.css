@@ -282,3 +282,33 @@ body{
         height: 320px;
     }
   }
+
+@media all and (min-width:200px) and  (max-width: 500px){
+    .menu{
+        display: flex;
+        flex-flow:column nowrap ;
+    }
+
+    .main-header__container{
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+    .flex-box{
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+
+    .container-products{
+        display:flex;
+        flex-flow: column;
+    }
+    .product_description{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .product__img{
+        height: 100px;
+    }
+  }
