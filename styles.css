@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&family=Poppins:wght@700&family=Roboto&display=swap');
+/*font-family: 'Inconsolata', monospace;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;*/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Inconsolata', monospace;
+}
+
+  .main-header {
+    padding: 0 20px;
+  }
+
+  .main-header__title{
+    text-align: center;
+    font-size: 2.7em;
+    margin: 10px 0;
+    color: #454546;
+    font-family: "Poppins";
+  }
+  .main-header__container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .menu{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+  }
+  .menu__item{
+    list-style: none;
+    margin: 0 5px;
+    padding: 10px;
+  }
+
+  .menu__link{
+    color: #000;
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .menu__item:hover .menu__link:hover{
+    background-color: #ececec;
+    transition: all .3s;
+  }
+  
+  .flex-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+    .main-header__tel{
+        font-size: 1.1em;
+    }
+        .main-header__direction{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+            .main-header__direction i{
+                display: flex;              
+                margin: 6px;
+            }
+  
+
+  .main {
+    padding: 0 20px;
+  }
+  
+  /* ESTILOS DE SLIDER */
+  .container-slider{
+    margin: 25px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+    width: 400%;
+    height: 500px;
+    margin-left: -100%;
+    position: relative;
+  }
+  .slider:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+  }
+  
+  .slider__section {
+    width: 100%;
+    position: relative;
+  }
+  .slider__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slider__btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+  }
+  .slider__btn:hover { 
+    background: #fff;
+  }
+  .slider__btn--left{
+    left: 10px;
+  }
+  .slider__btn--right {
+    right: 10px;
+  }
+  .slider__content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+    z-index: 999;
+  }
+  .slider__title{
+    font-size: 2.2em;
+    margin: 0;
+  }
+  .slider__txt{
+    margin: 5px 0;
+  }
+  .btn-shop{
+    display: block;
+    border: 2px solid #FF4E00;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    margin: 20px auto;
+    transition: all 0.5s;
+  }
+  .btn-shop:hover{
+    background: #FF4E00;
+    color: white;
+  }
+
+  .main-title{
+      margin: 20px;
+      font-size: 3em;
+      text-align: center;
+  }
+  /* ESTILOS DE PRODUCTOS */
+  .container-products {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .product {
+    flex-basis: 49%;
+    margin: 5px;
+
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  .product:before {
+    content: "Nuevo";
+    background: #FF4E00;
+    padding: 10px;
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    transform: rotate(-90deg);
+    color: white;
+    
+  }
+  
+  .product__img{
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .product__title{
+    text-align: center;
+  }
+  .product__price {
+    color: #FF4E00;
+    font-weight: bold;
+  }
+  .product__icon {
+    display: block;
+    margin-top: 10px;
+  }
+  .product:hover .product__icon {
+    color: #FF4E00;
+  }
+
+
+  @media all and (min-width:500px) and  (max-width: 800px) {
+    .menu{
+        display: flex;
+        flex-flow:column nowrap ;
+    }
+
+    .main-header__container{
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+    .flex-box{
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+
+    .container-products{
+        display:flex;
+        flex-flow: column;
+    }
+    .product_description{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .product__img{
+        height: 180px;
+    }
+  }
+
+  @media all and (min-width: 800px) and (max-width:1260px) {
+    .menu{
+        display: flex;
+        flex-flow:row wrap ;
+    }
+
+    .main-header__container{
+        flex-flow: column nowrap;
+        margin: 10px 0;
+    }
+    .flex-box{
+        flex-flow: column nowrap;
+    }
+
+    .container-products{
+        display:flex;
+        flex-flow: column;
+    }
+    .product_description{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .product__img{
+        height: 320px;
+    }
+  }
